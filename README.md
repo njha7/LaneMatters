@@ -1,4 +1,4 @@
-[Lane Matters](http://www.lanematters.com)
+[Lane Matters](http://lanematters.com/)
 ======
 
 ## Purpose
