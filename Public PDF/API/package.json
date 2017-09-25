@@ -1,0 +1,21 @@
+{
+  "name": "pdf-middleware",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@google-cloud/datastore": "^1.1.0",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "dotenv": "^4.0.0",
+    "express": "~4.15.2",
+    "jade": "~1.11.0",
+    "kindred-api": "^2.0.83",
+    "morgan": "~1.8.1",
+    "pg": "^7.2.0",
+    "serve-favicon": "~2.4.2"
+  }
+}

@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <h2 align="center">About</h2>
+    <div class="rightcol">
+        <h2>How are delta stats calculated?</h2>
+        <p>Delta stats are caluclated by taking the stats for a win and subtracting them from the same stats for a loss and averaging the result. For example, a player with 300 kills, 182 deaths, and 249 assists in wins as Kalista and 170 kills, 230 deaths, and 128 assists would have 130 kills, -48 deaths, and 121 assists and a delta KDA of -5.23.</p>
+        <h2>How are leads closed/lost calculated?</h2>
+        <p>Leads are determined by checking a player's gold against their lane opponent's gold at the end of lane phase. For consistency as we as simplicity we consider first turret the end of lane phase. A lead closed is a game in which the player had a lead at the end of lane phase and won. Conversely, a lead lost is when the player had a lead at the end of lane phase but lost.</p>
+    </div>
+    <div class="leftcol">
+        <h2>Why are some games missing?</h2>
+        <p>The Riot API isn't 100% accurate about repoting lane assignments. Leads closed, Δg, and Δcs require accurate reporting of lane assignments to be calculated correctly. In these games where lane assignment isn't accurate we do our best to determine lane assignment, but if we can't the game is logged and thrown out. You may see missing games later appear as we work to improve our determnation of lane assignments.</p>
+        <h2>How do I give feedback?</h2>
+        <p>Feel free to submit a bug report or a feature request <a href="https://github.com/njha7/firstbloodgg/issues/new">here</a>.</p>
+        <h2>What are all the different KDAs and how are they calculated?</h2>
+        <p>KDA is ratio of kills and assists to deaths. It is calculated by summing kills and assists and dividing by deaths at the end of the game.</p>
+            <ul>
+                <li>Lane KDA is calculated with the kills, deaths, and assists at the end of lane phase.</li>
+                <li>Turret Defense KDA is the KDA of a player under their <b>own</b> turret in the lane phase.</li>
+                <li>On Side KDA is the KDA of a player in the area between the outer edge of the river and their <b>own</b> turret in the lane phase.</li>
+                <li>Neutral KDA is the KDA of a player in the area between the edges of the river in the lane phase.</li>
+                <li>Offside KDA is the KDA of a player in the area between the outer edge of the river and the <b>opposing</b> turret in the lane phase.</li>
+                <li>Turret Dive KDA is the KDA of a player in dives <b>against</b> other players.</li>
+            </ul>
+    </div>
+</div>

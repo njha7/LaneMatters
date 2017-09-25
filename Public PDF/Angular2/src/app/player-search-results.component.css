@@ -1,0 +1,125 @@
+.info {
+    position: relative;
+    display: inline-block;
+}
+
+.info .infotext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.info:hover .infotext {
+    visibility: visible;
+}
+
+.Box > .Title + .Content, .Box > .Navigation + .Content, .Box > .Tab + .Content {
+    background: #ededed;
+}
+
+.ChampionStatsTable {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.ChampionStatsTable > .Body > .Row > .Cell {
+    height: 52px;
+    border-bottom: 1px solid #cdd2d2;
+    color: #999;
+    font-size: 12px;
+    font-weight: bold;
+    align-self: right;
+}
+
+.WinRatioGraph > .Graph {   
+    position: relative;
+    display: inline-block;
+    width: 98px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.ChampionStatsTable > .Body > .Row > .Cell.RatioGraph > .WinRatioGraph > .Graph {
+    width: 90px;
+}
+
+.ChampionStatsTable > .Body > .Row > .Cell.RatioGraph > .WinRatioGraph > .Graph > .Text {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.WinRatioGraph > .Graph > .Text.Right {
+    right: 5px;
+    text-align: right;
+}
+
+.WinRatioGraph > .Graph > .Text.Left {
+    left: 6px;
+    text-align: left;
+}
+
+.WinRatioGraph > .Graph > .Text {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    font-size: 11px;
+    z-index: 3;
+    color: #f2f2f2;
+    line-height: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.WinRatioGraph > .WinRatio {
+    color: #595E5E;
+    font-size: 12px;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+.WinRatioGraph > .Graph > .Fill.Left {
+    z-index: 2;
+    background: #3d95e5;
+    border: 1px solid #3480c6;
+}
+
+.WinRatioGraph > .Graph > .Fill.Right {
+    width: 100%;
+    z-index: 1;
+    background: #ee5a52;
+    border: 1px solid #c6443e;
+}
+
+.WinRatioGraph > .Graph > .Fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.WinRatioGraph > .Graph > .Bar {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-left: 1px solid #1a78ae;
+    border-right: 1px solid #c6443e;
+    z-index: 2;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

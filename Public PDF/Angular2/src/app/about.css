@@ -1,0 +1,19 @@
+.wrapper {
+    /* height: 100%;
+    width: 100%; */
+    padding-top: 30px;
+    /* margin-right: -15px;
+    margin-left: -15px; */
+}
+
+.leftcol {
+    width: 45%;
+    float: left;
+    text-align: left;
+}
+
+.rightcol {
+    width: 45%;
+    float: right;
+    text-align: left;
+}

@@ -1,0 +1,90 @@
+<h2>{{player}}</h2>
+<elo [player]="player" [region]="region"></elo>
+<br>
+<select id="tableSelecter" [(ngModel)]="selectedTable">
+    <option [ngValue]="0">Total</option>
+    <option [ngValue]="1">Win</option>
+    <option [ngValue]="2">Loss</option>
+    <option [ngValue]="3">Delta</option>
+</select>
+<table class="ChampionStatsTable">
+    <colgroup>
+        <col width="80">
+        <col width="50">
+        <col width="100">
+        <col width="100">
+        <col width="60">
+        <col width="60">
+        <col width="50">
+        <col width="50">
+        <col width="60">
+        <col width="60">
+        <col width="60">
+        <col width="60">
+        <col width="60">
+        <col width="60">
+        <col width="60">
+    </colgroup>
+    <tr>
+        <th>Champion</th>
+        <th>Role</th>
+        <th>W/L</th>
+        <th>Leads Closed<div class="info">&#9432;<span class="infotext">Percentage of games with a lead over the opposing laner that resulted in a win</span></div></th>
+        <th>CS/m<div class="info">&#9432;<span class="infotext">CS per minute</span></div></th>
+        <th>GPM<div class="info">&#9432;<span class="infotext">Gold earned per minute</span></div></th>
+        <!-- <th>DPM<div class="info">&#9432;<span class="infotext">Damage dealt to champions per minute</span></div></th> -->
+        <th>KDA</th>
+        <th>Lane KDA<div class="info">&#9432;<span class="infotext">Lane phase KDA</span></div></th>
+        <th>&#916;g<div class="info">&#9432;<span class="infotext">Difference in gold vs lane opponent at the end of lane phase</span></div></th>
+        <th>&#916;CS<div class="info">&#9432;<span class="infotext">Difference in CS vs lane opponent at the end of lane phase</span></div></th>
+        <th>Turret Defense KDA<div class="info">&#9432;<span class="infotext">KDA in turret dives against the player</span></div></th>
+        <th>On Side KDA<div class="info">&#9432;<span class="infotext">KDA on the player's side of the lane</span></div></th>
+        <th>Neutral KDA<div class="info">&#9432;<span class="infotext">KDA in the center of the lane</span></div></th>
+        <th>Offside KDA<div class="info">&#9432;<span class="infotext">KDA on the opposing player's side of the lane</span></div></th>
+        <th>Turret Dive KDA<div class="info">&#9432;<span class="infotext">KDA in turret dives against opponents</span></div></th>
+    </tr>
+    <tr *ngFor="let champ of iterableStats">
+        <td><champion-portrait cid="{{champ[0]}}"></champion-portrait></td>
+        <td>{{champ[1]}}</td>
+        <td class="RatioGraph Cell">
+            <div class="WinRatioGraph">
+                <div class="Graph">
+                    <div class="Fill Left" [style.width]="(champ[2]/(champ[2]+champ[3]) * 100).toFixed() + '%'"></div>
+                    <div class="Text Left">{{champ[2]}}W</div>
+                    <div class="Fill Right"></div>
+                    <div class="Text Right">{{champ[3]}}L</div>
+                    <div class="Bar" [style.width]="(champ[2]/(champ[2]+champ[3]) * 100).toFixed() + '%'"></div>
+                </div>
+            <span class="WinRatio normal">{{(champ[2]/(champ[3]+champ[2]) * 100).toFixed()}}%</span>
+            </div>
+        </td>
+        <td class="RatioGraph Cell">
+                <div class="WinRatioGraph">
+                    <div class="Graph">
+                        <div class="Fill Left" [style.width]="(champ[4] + champ[17]) > 0 ? 
+                                (champ[4]/(champ[4] + champ[17]) * 100).toFixed() + '%' : '50%'"></div>
+                        <div class="Text Left">{{champ[4]}}W</div>
+                        <div class="Fill Right"></div>
+                        <div class="Text Right">{{champ[17]}}L</div>
+                        <div class="Bar" [style.width]="(champ[4] + champ[17]) > 0 ? 
+                                (champ[4]/(champ[4] + champ[17]) * 100).toFixed() + '%' : '50%'"></div>
+                    </div>
+                <span class="WinRatio normal">{{(champ[4] + champ[17]) > 0 ? (champ[4]/(champ[4] + champ[17]) * 100).toFixed() : 0}}%</span>
+                </div>
+            </td>
+        <td>{{champ[5]}}</td>
+        <td>{{champ[6]}}</td>
+        <!-- <td>{{champ[7]}}</td> -->
+        <td>{{champ[8]}}</td>
+        <td>{{champ[9]}}</td>
+        <td>{{champ[10]}}</td>
+        <td>{{champ[11]}}</td>
+        <td>{{champ[12]}}</td>
+        <td>{{champ[13]}}</td>
+        <td>{{champ[14]}}</td>
+        <td>{{champ[15]}}</td>
+        <td>{{champ[16]}}</td>              
+    </tr>
+</table>
+
+<br>

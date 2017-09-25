@@ -1,0 +1,21 @@
+<div class="search-div">
+    <h3 class="mt-5">Player Search</h3>
+    <form class="player-search-from">
+        <input class="player-search-form-text" id="summonerName" placeholder="Summoner 1, Summoner 2..."
+          [(ngModel)]="summonerName" name="summonerName">
+        <select id="region" [(ngModel)]="region" name="region">
+            <option value="br">BR</option>
+            <option value="eune">EUNE</option>
+            <option value="euw">EUW</option>
+            <option value="jp">JP</option>
+            <option value="kr">KR</option>
+            <option value="lan">LAN</option>
+            <option value="las">LAS</option>
+            <option value="na">NA</option>
+            <option value="oce">OCE</option>
+            <option value="tr">TR</option>
+            <option value="ru">RU</option>
+        </select>
+        <button (click)="search()">Search</button>
+    </form>
+</div>
